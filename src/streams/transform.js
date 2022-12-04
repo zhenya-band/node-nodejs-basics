@@ -2,7 +2,7 @@ import { Transform } from 'stream';
 
 const reverseStream = new Transform({
     transform(chunk, encoding, callback) {
-        reverseStream.push(chunk.reverse());
+        reverseStream.push(chunk.reverse() + '\n');
         callback();
     },
 });
